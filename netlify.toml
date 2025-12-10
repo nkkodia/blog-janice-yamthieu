@@ -1,9 +1,7 @@
 [build]
-# Commande de construction qui sera exécutée par Netlify
 command = "hugo"
-# Le répertoire que Hugo crée et que Netlify doit publier
 publish = "public"
 
 [build.environment]
-# Ceci indique à Netlify quelle version de Hugo installer
-HUGO_VERSION = "0.125.1"
+# MISE À JOUR : On passe à une version plus récente et compatible avec Ananke
+HUGO_VERSION = "0.152.0"
