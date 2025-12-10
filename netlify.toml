@@ -5,3 +5,34 @@ publish = "public"
 [build.environment]
 # MISE À JOUR : On passe à une version plus récente et compatible avec Ananke
 HUGO_VERSION = "0.152.0"
+
+[[menu.main]]
+name = "Accueil"
+url = "/"
+weight = 5
+
+[[menu.main]]
+name = "À Propos"
+url = "/a-propos/"
+weight = 10
+
+[[menu.main]]
+# Affichera un index de tous vos articles de méditation
+name = "Méditation"
+url = "/textes-liturgiques/"
+weight = 20
+
+[[menu.main]]
+name = "Podcast"
+url = "/podcast/"
+weight = 30
+
+[[menu.main]]
+name = "Vidéos"
+url = "/videos/"
+weight = 40
+
+[[menu.main]]
+name = "Livres / Ebook (Bientôt...)"
+url = "/livres/"
+weight = 50
