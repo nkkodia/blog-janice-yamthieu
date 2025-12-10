@@ -1,6 +1,3 @@
-# static/admin/config.yml
-
-# 1. Configuration du Backend (Connexion à Git Gateway)
 backend:
   name: git-gateway
   branch: main # Assurez-vous que cette branche correspond à votre branche principale sur GitHub
