@@ -1,0 +1,8 @@
+# config.toml
+baseURL = "/" # Laisser comme ça pour Netlify au début
+languageCode = "fr-fr"
+title = "Mon Blog Spirituel et de Motivation" # Remplacez par le nom de votre blog
+theme = "ananke"
+
+[params]
+# Des paramètres supplémentaires spécifiques à Ananke peuvent être ajoutés ici
