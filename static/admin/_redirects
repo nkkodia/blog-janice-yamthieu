@@ -1,1 +1,3 @@
-/admin/ /admin/index.html 200
+# _redirects
+# Redirige le chemin d'identité vers sa fonction (anti-404 pour la réinitialisation/invitation)
+/.netlify/identity /index.html 200
