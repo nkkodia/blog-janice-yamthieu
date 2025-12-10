@@ -1,0 +1,58 @@
+backend:
+  # Utilise Git Gateway pour l'authentification
+  name: git-gateway
+  branch: main # Assurez-vous que c'est la bonne branche (main ou master)
+
+# Dossier où stocker les images (à créer si non existant)
+media_folder: "static/images/uploads" 
+# Chemin public pour afficher ces images
+public_folder: "/images/uploads"
+
+collections:
+  # Configuration pour la page statique "À Propos"
+  - name: "a-propos"
+    label: "À Propos"
+    files:
+      - label: "Éditer la page À Propos"
+        name: "about"
+        # Le fichier à éditer (vous devrez peut-être le créer une fois manuellement : content/a-propos/_index.md)
+        file: "content/a-propos/_index.md" 
+        fields:
+          - {label: "Titre", name: "title", widget: "string"}
+          - {label: "Contenu", name: "body", widget: "markdown"}
+          
+  # Configuration pour l'onglet Méditation : 1. Textes Liturgiques
+  - name: "textes-liturgiques"
+    label: "1. Textes Liturgiques"
+    folder: "content/textes-liturgiques"
+    create: true # Permet la création de nouveaux posts
+    slug: "{{slug}}"
+    fields:
+      - {label: "Titre", name: "title", widget: "string", required: true}
+      - {label: "Date de Publication", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:MM:SSZ", required: true}
+      - {label: "Brouillon (Draft)", name: "draft", widget: "boolean", default: true} # Mettre à false pour publier
+      - {label: "Contenu", name: "body", widget: "markdown", required: true}
+
+  # Configuration pour l'onglet Méditation : 2. Articles Thématiques
+  - name: "articles"
+    label: "2. Articles Thématiques"
+    folder: "content/articles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Titre", name: "title", widget: "string", required: true}
+      - {label: "Date de Publication", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:MM:SSZ", required: true}
+      - {label: "Brouillon (Draft)", name: "draft", widget: "boolean", default: true}
+      - {label: "Contenu", name: "body", widget: "markdown", required: true}
+
+  # Configuration pour l'onglet Méditation : 3. Développement Personnel & Spirituel
+  - name: "dev-perso"
+    label: "3. Développement Personnel & Spirituel"
+    folder: "content/developpement-personnel"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Titre", name: "title", widget: "string", required: true}
+      - {label: "Date de Publication", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:MM:SSZ", required: true}
+      - {label: "Brouillon (Draft)", name: "draft", widget: "boolean", default: true}
+      - {label: "Contenu", name: "body", widget: "markdown", required: true}
